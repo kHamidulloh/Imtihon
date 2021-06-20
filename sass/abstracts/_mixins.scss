@@ -1,0 +1,41 @@
+@mixin baElements ($w, $h) {
+  content: "";
+  display: inline-block;
+  width: $w;
+  height: $h;
+}
+
+@mixin baImages ($w, $h, $url) {
+  @include baElements($w, $h);
+
+  background-image: $url;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+@mixin respond ($breakpoint) {
+  @if ($breakpoint == tab-port) {
+    @media only screen and (max-width:56.25em) {@content}
+  }
+}
+@mixin respond ($breakpoint) {
+  @if ($breakpoint == phone) {
+    @media only screen and (max-width:37.5em) {@content}
+  }
+}
+
+@mixin text18 {
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+}
+@mixin text48 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 4.8rem;
+}
+@mixin text15 {
+  font-weight: 600;
+  font-size: 1.5rem;
+  line-height: 2.5rem;
+}

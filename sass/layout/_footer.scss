@@ -1,0 +1,57 @@
+.footer {
+    background-color: $color-green-29;
+    padding: 4.8rem 0;
+    &__container {
+      display: flex;
+      @include respond (tab-port) {
+        display: block;
+        position: relative;
+      }
+    }
+    & .hero__list {
+        margin-top: 2.5rem;
+    }
+  &__center {
+
+    &__text {
+        width: 21rem;
+        @include text15;
+        color: $color-white;
+        opacity: 0.6;
+        margin-left: 12.5rem;
+        margin-right: 36rem;
+        @include respond (tab-port) {
+          margin: 0;
+          position: absolute;
+          top: 5.3rem;
+          right: 0;
+        }
+    }
+  }
+  &__right {
+    @include respond (tab-port) {
+      display: flex;
+      margin-top: 3.3rem;
+    }
+    &__text {
+        width: 25.5rem;
+        @include text15;
+        color: $color-white;
+        opacity: 0.6;
+        @include respond (tab-port) {
+          margin-left: auto;
+        }
+    }  
+      &__imgs {
+        margin-bottom: 5.1em; 
+        margin-left: 14rem;
+        @include respond (tab-port) {
+          margin: 0;
+        }
+        &__gmail {
+            margin-left: 1.6rem;
+            margin-right: 1.6rem;  
+        }
+      }
+  }
+}

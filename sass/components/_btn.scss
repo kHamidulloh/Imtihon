@@ -1,0 +1,26 @@
+.btn--white {
+    color: $color-white;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    padding: 1rem 3.3rem;
+    border-radius:2.4rem ;
+    border: 2px solid $color-white;
+    &:active {
+        color: $color-green-29 ;
+        background-color: $color-white;
+    }
+}
+.btn--dark {
+    color: $color-dark;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 2.8rem;
+    padding: 1rem 3.3rem;
+    border-radius:2.4rem ;
+    border: 2px solid $color-dark;
+    &:active {
+        color: $color-white;
+        background-color: $color-green-34;
+    }
+}

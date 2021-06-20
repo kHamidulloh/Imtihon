@@ -1,0 +1,175 @@
+.hero {
+    width: 100%;
+    background: $color-green-56;
+    position: relative;
+    display: flex;
+ &::before {
+    @include baImages (10rem,20rem,url(../../images/hero-left-img.png));
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    @include respond (tab-port) {
+       display: none;
+    }
+ }
+ &__container {
+   position: relative;
+ }
+ &-logo {
+    margin-right: 8rem;
+ }
+ & .btn--white {
+    margin-left: auto;
+ }
+ &__top {
+    display: flex;
+    padding-top: 7.3rem;
+    &::after {
+      @include baImages (35.8rem,10rem,url(../../images/hero-right-img.png));
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      @include respond (tab-port) {
+      left: 0;
+      margin-left: auto;
+      margin-right: auto;
+      }
+    }
+ }
+
+&__texts {
+    margin-top: 12.9rem;
+    padding-bottom: 25rem;
+    display: flex;
+
+    position: relative;
+    @include respond (tab-port) {
+       display: inline;
+    }
+ &__right {
+    display: flex;
+    margin-left: auto;
+ }
+ &__title {
+    width: 60.5rem;
+    font-weight: bold;
+    font-size: 10rem;
+    line-height: 10rem;
+    color: $color-white;
+
+    margin: 0;
+    @include respond (tab-port) {
+       width: 39rem;
+      font-weight: bold;
+      font-size: 64px;
+      line-height: 56px;
+      text-align: center;
+
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 11.2rem;
+    }
+ }
+ &__text {
+    width: 44.5rem;
+    @include text18;
+    color: $color-white;
+    display: flex;
+
+    align-items: flex-end;
+    @include respond (tab-port) {
+      width: 47rem;
+      font-style: normal;
+      font-size: 1.5rem;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2.4rem;
+      margin-bottom: 25.6rem;
+    }
+    &::before {
+      @include baElements (5rem,4px) ;
+      background: $color-blue-c7;
+      position: absolute;
+      top: 0;
+      @include respond (tab-port) {
+         display: none;
+      }
+    }
+   
+  }
+  &__span {
+     color: $color-light-7e;
+  }
+ }
+}
+
+
+// HERO2
+
+.hero2 {
+   width: 100%;
+   background: $color-green-56;
+   position: relative;
+   display: flex;
+&::before {
+   @include baImages (10rem,20rem,url(/images/hero2-img.png));
+   position: absolute;
+   bottom: 0;
+   right: 0;
+}
+& .container {
+   position: relative;
+}
+&-logo {
+   margin-right: 8rem;
+}
+& .btn--white {
+   margin-left: auto;
+}
+&__top {
+   display: flex;
+   padding-top: 7.3rem;
+   
+}
+
+&__texts {
+   margin-top: 12.9rem;
+   padding-bottom: 25rem;
+   display: flex;
+
+   position: relative;
+&__right {
+   display: flex;
+   margin-left: auto;
+}
+&__title {
+   width: 38rem;
+   font-weight: bold;
+   font-size: 6.4rem;
+   line-height: 10rem;
+   color: $color-white;
+
+   margin: 0;
+}
+&__text {
+   width: 73rem;
+   @include text18;
+   color: $color-white;
+   display: flex;
+   margin-top: 4rem;
+
+   align-items: flex-end;
+   &::before {
+     @include baElements (5rem,4px) ;
+     background: $color-light-7e;
+     position: absolute;
+     top: 0;
+   }
+  
+ }
+ &__span {
+    color: $color-light-7e;
+ }
+}
+}
