@@ -1,0 +1,40 @@
+.product-imgs {
+    display: flex;
+    justify-content: space-between;
+    @include respond (phone) {
+        display: block;
+    }
+    &__left {
+        display: flex;
+        flex-direction: column;
+        &__img {
+            width: 44.5rem;
+            height: 28rem;
+            @include respond (tab-port) {
+                width: 27.7rem;
+                height: 17.4rem;
+            }
+            @include respond (phone) {
+                width: 32.7rem;
+                height: 17.4rem;
+                margin-bottom: 2rem;
+            }
+            
+            &:last-child {
+                margin-top: auto;
+            }
+        }
+    }
+    &__right {
+        width: 63.5rem;
+        height: 59.2rem;
+        @include respond (tab-port) {
+            width: 39.5rem;
+            height: 36.8rem;
+        }
+        @include respond (tab-port) {
+            width: 32.7rem;
+            height: 36.8rem;
+        }
+    }
+}

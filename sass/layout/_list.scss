@@ -1,45 +1,158 @@
-.hero__list {
+.header__nav {
     display: flex;
- &__item {
-    list-style: none;
-    margin-right: 40px;
-    &.tablet {
+    position: relative;
+    z-index: 10;
+    &::after {
+        @include baElements (100%,1px);
+        background-color: $color-white;
+        opacity: 0.2;
+        mix-blend-mode: normal;
+        position: absolute;
+        bottom: 0;
+    }
+
+   &__logo {
+      width: 14.3rem;
+      height: 2.3rem;
       @include respond (tab-port) {
-         margin-top: 5.3rem;
+        margin-left: 4.2rem;
       }
+   }
+  &__list {
+      list-style: none;
+      margin-left: 19.7rem;
+      display: flex;
+      @include respond (tab-port) {
+        display: none;
+      }
+      & .list__item {
+          margin-right: 3.4rem;
+          list-style: none;
+          text-decoration: none;
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $color-white;
+          &:last-child {
+              margin-right: 0;
+          }
+          &:active {
+            color: $color-light-4a;
+          }
+        }
     }
- }
- &__link {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    color: $color-white;
-    align-items: center;
-    &:active {
-        color: $color-light-7e;
-    }
- }
+  &__right{
+     display: inline-block;
+     margin-left: auto;
+     margin-bottom: 4.4rem;
+      &__img {
+        width: 2.3rem;
+        height: 2rem;
+      }
+  }
 }
 
-// HERO2
 
-.hero2__list {
+.headphones1 {
     display: flex;
- &__item {
-    list-style: none;
-    margin-right: 40px;
- }
- &__link {
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    color: $color-white;
-    align-items: center;
-    &:active {
-        color: $color-light-7e;
+    justify-content: space-between;
+    
+   &__logo {
+      width: 14.3rem;
+      height: 2.3rem;
+      @include respond (tab-port) {
+        margin-right: 44.7rem;
+      }
+      @include respond (phone) {
+        margin-right: 0;
+      }
+   }
+  &__list {
+      list-style: none;
+      display: flex;
+      @include respond (tab-port) {
+        display: none;
     }
- }
+      & .list__item {
+          margin-right: 3.4rem;
+          list-style: none;
+          text-decoration: none;
+          font-size: 1.3rem;
+          line-height: 2.5rem;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          color: $color-white;
+          &:last-child {
+              margin-right: 0;
+          }
+          &:active {
+            color: $color-light-4a;
+          }
+        }
+    }
+  &__right{
+   display: inline-block;
+    &__img {
+        width: 2.3rem;
+        height: 2rem;
+      }
+  }
 }
 
+.footer__nav {
+display: flex;
+padding-top: 7.1rem;
+justify-content: space-between;
+@include respond (tab-port) {
+  display: inline ;
+}
+    &__logo {
+        width: 14.3rem;
+        height: 2.5rem;
+        @include respond (tab-port) {
+          margin-top: 5.6rem; 
+        }
+        @include respond (phone) {
+          margin-left: 8.3rem;
+        }
+    }
+    &__list {
+        list-style: none;
+        display: flex;
+        @include respond (phone) {
+          justify-content: center;
+        }
+      & li {
+        @include respond (phone) {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        }
+        
+      }
+        @include respond (tab-port) {
+            margin-top: 3.2rem;
+        }
+        & .list__item {
+            margin-right: 3.4rem;
+            list-style: none;
+            text-decoration: none;
+            font-size: 1.3rem;
+            line-height: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: $color-white;
+            @include respond (phone) {
+              margin-right: 0;
+              margin-top: 1.6rem;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+            &:active {
+                color: $color-light-4a;
+              }
+          }
+    }
+}

@@ -1,26 +1,87 @@
-.btn--white {
+.btn--4a {
+    background-color: $color-light-4a;
+    padding: 1.5rem 3rem;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
     color: $color-white;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    padding: 1rem 3.3rem;
-    border-radius:2.4rem ;
-    border: 2px solid $color-white;
+    text-decoration: none;
+    display: inline-block;
     &:active {
-        color: $color-green-29 ;
-        background-color: $color-white;
+        background-color: $color-light-85;
     }
 }
 .btn--dark {
-    color: $color-dark;
-    font-weight: 600;
-    font-size: 1.8rem;
-    line-height: 2.8rem;
-    padding: 1rem 3.3rem;
-    border-radius:2.4rem ;
-    border: 2px solid $color-dark;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-white;
+    padding: 1.5rem 3rem;
+    background-color: $color-dark;
+    text-decoration: none;
+    display: inline-block;
     &:active {
-        color: $color-white;
-        background-color: $color-green-34;
+        background-color: $color-dark-4C;
     }
+}
+.btn--transparent {
+    background-color: transparent;
+    padding: 1.5rem 3rem;
+    font-size: 13px;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: $color-dark;
+    border: 1px solid $color-dark;
+    text-decoration: none;
+    display: inline-block;
+    &:active {
+        background-color: $color-dark;
+        color:$color-white;
+    }
+}
+.btn {
+    width: 12rem;
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 1.6rem;
+    &__minus{
+        position: absolute;
+        left: 15px;
+        z-index: 10;
+        color: $color-dark ;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+        &:hover {
+            color: $color-light-4a;
+        }
+    }
+    &__plus{
+        position: absolute;
+        right: 3rem;
+        z-index: 10;
+        color: $color-dark;
+        mix-blend-mode: normal;
+        opacity: 0.25;
+        &:hover {
+            color: $color-light-4a;
+        }
+    }
+
+    &-number {
+        background-color: #f1f1f1;
+        padding: 1.5rem 5.1rem;
+        position: relative;  
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+    }
+
+}
+.btns {
+    display: flex;
 }

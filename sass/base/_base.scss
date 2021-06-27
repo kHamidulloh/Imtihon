@@ -14,7 +14,7 @@ html {
 }
 
 body {
-  font-family:'Livvic',sans-serif;
+  font-family:'Manrope',sans-serif;
 } 
 .container {
   width: 100%;
@@ -24,6 +24,11 @@ body {
   padding-left: 15px;
   padding-right: 15px;
   @include respond (tab-port) {
-    padding: 0 4rem;
- }
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+  @include respond (phone) {
+    padding-left: 2.4rem;
+    padding-right: 2.4rem;
+  }
 }

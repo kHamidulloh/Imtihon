@@ -1,0 +1,83 @@
+.headphones1-product {
+    padding-top: 7.9rem;
+    background-color: #FAFAFA;
+    @include respond (phone) {
+        padding-top: 1.6rem;
+    }
+    &__list {
+        list-style: none;
+        &__item {
+            display: flex;
+            align-items: center;
+            @include respond (phone) {
+                flex-direction: column;
+            }
+        }
+    }
+    &__texts {
+        width: 44.5rem;
+        margin-left: 12.5rem;
+        &__new {
+            font-weight: normal;
+            font-weight: normal;
+            font-size: 1.4rem;
+            line-height: 1.9rem;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
+            color: $color-light-4a ;
+        }
+        &__title {
+            width: 27.5rem;
+            @include text40;
+            margin-top: 1.6rem;
+            margin-bottom: 3.2rem; 
+            letter-spacing: 1.42857px;
+            text-transform: uppercase;
+            color: $color-dark;
+            @include respond (phone) {
+                width: 32.7rem;
+            }
+        }
+        &__text {
+            @include text15;
+            mix-blend-mode: normal;
+            opacity: 0.5;
+            color: $color-dark;
+            @include respond (phone) {
+                width: 32.7rem;
+            }
+        }
+        &__price {
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            letter-spacing: 1.28571px;
+            text-transform: uppercase;
+            color: $color-dark;
+            margin-top: 3.2rem;
+            margin-bottom: 4.7rem;
+        }
+    }
+    &__img {
+        width: 54rem;
+        height: 56rem;
+        margin-top: 5.6rem;
+        @include respond (tab-port) {
+            width: 28.1rem;
+            height: 48rem;
+        }
+        @include respond (phone) {
+            width: 32.7rem;
+            height: 32.7rem;
+            margin-top: 2.4rem;
+            margin-bottom: 3.2rem;
+        }
+    }
+    &__back {
+        @include text15;
+        text-decoration: none;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+        color: $color-dark;
+    }
+}

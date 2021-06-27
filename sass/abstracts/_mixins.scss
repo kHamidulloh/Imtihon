@@ -13,29 +13,45 @@
   background-size: contain;
 }
 
-@mixin respond ($breakpoint) {
-  @if ($breakpoint == tab-port) {
-    @media only screen and (max-width:56.25em) {@content}
-  }
-}
-@mixin respond ($breakpoint) {
-  @if ($breakpoint == phone) {
-    @media only screen and (max-width:37.5em) {@content}
-  }
-}
 
-@mixin text18 {
-  font-weight: 600;
-  font-size: 1.8rem;
-  line-height: 2.8rem;
-}
-@mixin text48 {
-  font-weight: bold;
-  font-size: 4.8rem;
-  line-height: 4.8rem;
-}
 @mixin text15 {
-  font-weight: 600;
+  font-weight: 500;
   font-size: 1.5rem;
   line-height: 2.5rem;
+}
+@mixin text40 {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.4rem;
+  letter-spacing: 1.42857px;
+  text-transform: uppercase;
+  color: $color-dark;
+}
+@mixin text30 {
+  font-weight: bold;
+  font-size: 3.2rem;
+  line-height: 3.6rem;
+  letter-spacing: 1.14286px;
+  text-transform: uppercase;
+  color: $color-dark;
+}
+
+@mixin respond ($breakpoint) {
+
+  @if ($breakpoint==tab-port) {
+    @media only screen and (max-width:56.25em) {
+      @content
+    }
+  }
+
+  ;
+  @if ($breakpoint==phone) {
+    @media only screen and (max-width:37.5em) {
+      @content
+    }
+  }
+
+  ;
+
+  
 }

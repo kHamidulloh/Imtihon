@@ -1,0 +1,142 @@
+.modal {
+    width: 100vw;
+    height: 100vh;
+    background: rgba(68,81,102,0.24);
+    position: fixed;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 2;
+    display: none;
+
+    display: flex;
+    &__content {
+        width: 37.7rem;
+        padding: 3rem;
+        background: $color-white;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-top: 13rem;
+
+        position: relative;
+        transform: scale(0.01);
+        transition: all .4s ease-in-out;
+        @include respond (phone) {
+            width: 100%;
+        }
+    }
+    &__close {
+        font-size: 3.5rem;
+        text-decoration: none;
+        color: $color-dark;
+        position: absolute;
+        top: 0;
+        right: 5px;
+    }
+    &__top {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        font-weight: bold;
+        font-size: 1.8rem;
+        line-height: 2.5rem;
+        letter-spacing: 1.28571px;
+        text-transform: uppercase;
+        color: $color-dark;
+    }
+    &__text {
+        @include text15;
+        text-decoration: underline;
+        color: $color-dark;
+        mix-blend-mode: normal;
+        opacity: 0.5;
+    }
+
+    &__center {
+        padding: 3.2rem 0;
+        & .modal__product {
+            display: flex;
+            align-items: center;
+            margin-top: 2.4rem;
+            &:first-child {
+                margin-top: 0;
+            }
+            & .modal__texts {
+                margin-left: 1.6rem;
+            }
+            & .modal__title {
+                @include text15;
+                color: $color-dark;
+                font-weight: bold;
+            }
+            & .modal__text {
+                @include text15;
+                font-weight: bold;
+                color: $color-dark;
+                text-decoration: none;
+                mix-blend-mode: normal;
+                opacity: 0.5;
+            }
+            & .modal__img {
+                width: 6.4rem;
+                height: 6.4rem;
+            }
+        }
+        
+    }
+
+    &__bottom {
+        display: flex;
+        justify-content: space-between;
+        & .modal__text {
+            text-decoration: none;
+        }
+        & .modal__allprice {
+            font-weight: bold;
+            font-size: 1.8rem;
+            line-height: 2.5rem;
+            align-items: center;
+            text-transform: uppercase;
+            color: $color-dark;
+        }
+    }
+    &__bottom-btn {
+        font-weight: bold;
+        font-size: 1.3rem;
+        line-height: 1.8rem;
+        text-align: center;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $color-white;
+        margin-top: 2.4rem;
+
+        display: block;
+    }
+    &__btn {
+        width: 9.6rem;
+        align-items: end;
+        margin-left: auto;
+        margin-right: -10px;
+      & .btn-number {
+        padding: .7rem 4rem;
+      }
+      & .btn__plus {
+        top: 1rem;
+      }
+      & .btn__minus {
+        top: 1rem;
+      }
+    }
+}
+
+
+#modal:target {
+    opacity: 1;
+    visibility: visible ;
+}
+
+#modal:target .modal__content {
+    transform: scale(1);
+}

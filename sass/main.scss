@@ -12,18 +12,25 @@
 @import './components/btn';
 @import './components/card';
 @import './components/dropdown';
-@import './components/text';
 
 // LAYOUT
 @import './layout/header';
 @import './layout/nav';
-@import './layout/teams';
-@import './layout/motivation';
-@import './layout/stories';
+@import './layout/site-top';
+@import './layout/section';
+@import './layout/product-center';
+@import './layout/site-headphones';
+@import './layout/speakers';
+@import './layout/comment';
 @import './layout/footer';
 @import './layout/forms';
 @import './layout/list';
-@import './layout/cards';
+@import './layout/earphones';
+@import './layout/headphones-product';
+@import './layout/product-imgs';
+@import './layout/products-bottom';
+@import './layout/modal';
+@import './layout/checkout';
 
 // PAGES
 @import './pages/home';
